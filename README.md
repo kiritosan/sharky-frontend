@@ -32,4 +32,4 @@ streamlit run ./frontend/__init__.py
 
 ## 项目截图
 
-![运行截图](shot.png)
+![运行截图](../../../../../../C:/Users/Willem/Desktop/%E7%BB%BC%E5%90%88%E5%B7%A5%E7%A8%8B%E8%AE%BE%E8%AE%A1/fronted/shot.png)

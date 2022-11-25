@@ -24,8 +24,9 @@ def main():
 
     # Set sidebar
     st.sidebar.title("Crowd Counting System")
-    app_mode = st.sidebar.selectbox("请选择计数模型",
+    app_mode = st.sidebar.radio("请选择计数模型",
         ["使用说明", "运行系统", "查看源码", "显示历史记录"])
+
     if app_mode == "使用说明":
         st.sidebar.success('选择运行系统进行人群计数')
 
@@ -42,6 +43,10 @@ def main():
             # 代码运算
         st.success('Done!')
         st.success('This is a success', icon="🎉")
+        
+        
+        path = os.path.abspath(os.path.join(os.getcwd(), "data", "processed", "v1.mp4"))
+        st.video('C:/Users/Willem/data/processed/v1.mp4')
 
 
     elif app_mode == "查看源码":
@@ -60,7 +65,7 @@ def basic_config():
         page_title="人群计数系统",
         page_icon="🧊",
         layout="wide",
-        initial_sidebar_state="collapsed",
+        initial_sidebar_state="expanded",
         # menu_items={
         #     'Get Help': 'https://www.extremelycoolapp.com/help',
         #     'Report a bug': "https://www.extremelycoolapp.com/bug",
@@ -94,22 +99,32 @@ def run_the_app():
             st.header("🎴 Image")
             originalImgCol, processedImgCol = st.columns(2)
             uploaded_file = st.file_uploader("Choose a file")
-            returned_file = run_model_get_result(uploaded_file)
+            if uploaded_file is not None:
+                filename = uploaded_file.name
+            else:
+                filename = ""
+            returned_file = run_model_get_result(uploaded_file, filename)
 
             with originalImgCol:              
                 if uploaded_file is not None:
                     image = Image.open(uploaded_file)
-                    st.image(image, caption='Original Image', use_column_width=True)
+                    st.image(image, caption=f'Original Image: {filename}', use_column_width=True)
                 else:
                     st.image("https://i.imgur.com/6jK6Y1r.jpg", caption="Original Image", use_column_width=True)
             with processedImgCol:
+                ##############################################################
                 if returned_file is not None:
+                    # path = os.path.abspath(os.path.join(os.getcwd(), "data", "processed", "v1.mp4"))
+                    # video_file = open(path, 'rb')
+                    # video_bytes = video_file.read()
+                    # st.video(video_bytes)
+                #################################################################
                     image = Image.open(returned_file)
-                    st.image(image, caption='Original Image', use_column_width=True)
+                    st.image(image, caption='Processed Image', use_column_width=True)
                 else:
                     st.image("https://i.imgur.com/6jK6Y1r.jpg", caption="Processed Image", use_column_width=True)
 
-            
+
         with dataTab:
             st.header("🗃 Data")
  
@@ -140,9 +155,10 @@ def run_the_app():
         })
         return summary
 
-    def run_model_get_result(uploaded_file1):
-        if uploaded_file1 is not None:
-            return os.path.abspath(os.path.join(os.getcwd(), "data", "processed", "processed.png"))
+    # return assert's path or none
+    def run_model_get_result(uploaded_file, filename):
+        if uploaded_file is not None:
+            return os.path.abspath(os.path.join(os.getcwd(), "data", "processed", filename))
         else:
             return None
 
