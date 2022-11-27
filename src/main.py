@@ -22,7 +22,7 @@ def main():
     readme_text = st.markdown(ReadmeContent, unsafe_allow_html=True)
 
     # Get the source code for the app
-    with open("frontend/__init__.py", "r", encoding='UTF-8') as f:
+    with open("src/main.py", "r", encoding='UTF-8') as f:
         sourceCode = f.read()
 
     # Set sidebar
