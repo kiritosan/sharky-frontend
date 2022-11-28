@@ -11,4 +11,4 @@ USER app
 COPY --chown=app:app . .
 
 EXPOSE 8501
-ENTRYPOINT ["streamlit", "run", "./frontend/__init__.py"]
+ENTRYPOINT ["streamlit", "run", "./src/main.py"]

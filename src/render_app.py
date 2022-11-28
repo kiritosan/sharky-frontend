@@ -1,20 +1,25 @@
 import streamlit as st
 from PIL import Image
 from utils import request_processed_image_url
-# from streamlit import UploadedFile
+from typing import Literal
+from streamlit.delta_generator import DeltaGenerator
+from streamlit.runtime.uploaded_file_manager import UploadedFile
 
-def render_app():
+def render_app() -> None:
         # https://emojipedia.org/flower-playing-cards/
+        # imageTab, dataTab = st.tabs(["🎴 Image", "🗃 Data"])
+        imageTab: DeltaGenerator; dataTab:DeltaGenerator
         imageTab, dataTab = st.tabs(["🎴 Image", "🗃 Data"])
 
         with imageTab:
             st.header("🎴 Image")
+            originalImgCol: DeltaGenerator; processedImgCol: DeltaGenerator
             originalImgCol, processedImgCol = st.columns(2)
-            uploaded_file = st.file_uploader("Choose a file")
+            uploaded_file: UploadedFile | None = st.file_uploader("Choose a file")
             if uploaded_file is not None:
-                filename = uploaded_file.filename
+                filename = uploaded_file.name
             else:
-                filename = ""
+                filename: Literal[''] = ""
 
             with originalImgCol:
                 if uploaded_file is not None:
@@ -25,7 +30,7 @@ def render_app():
                     st.image("https://i.imgur.com/6jK6Y1r.jpg", caption="Original Image", use_column_width=True)
             with processedImgCol:
                 if uploaded_file is not None:
-                    st.sidebar.warning(uploaded_file.filename)
+                    st.sidebar.warning(uploaded_file.name)
                 returned_url = request_processed_image_url(uploaded_file)
                 if returned_url is not None:
                     st.sidebar.success(returned_url)

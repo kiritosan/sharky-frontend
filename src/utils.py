@@ -1,10 +1,11 @@
 import requests
 import streamlit as st
+from typing import Literal
 
 # return assert's path or none
 def request_processed_image_url(uploaded_file):
-    url = "http://localhost:8000/images/"
-    headers = {
+    url: Literal['http://localhost:8000/images/'] = "http://localhost:8000/images/"
+    headers: dict[str, str] = {
         'accept': 'application/json',
         # requests won't add a boundary if this header is set when you pass files=
         # 'Content-Type': 'multipart/form-data',
@@ -13,7 +14,7 @@ def request_processed_image_url(uploaded_file):
     if uploaded_file is not None:
 
         files = {
-            'files': (uploaded_file.filename ,uploaded_file.getvalue(), 'image/jpeg'),
+            'files': (uploaded_file.name ,uploaded_file.getvalue(), 'image/jpeg'),
         }
 
         response = requests.request('POST', url, headers=headers, files=files)
