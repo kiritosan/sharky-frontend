@@ -11,21 +11,29 @@
 pip install -r requirements.txt
 
 # 运行
-streamlit run ./frontend/__init__.py
+streamlit run ./src/main.py
 ```
 
 ## 项目结构
 
 ``` bash
 .
-├── frontend
-│   └── __init__.py # 启动文件
+├── Dockerfile
 ├── poetry.lock
 ├── pyproject.toml
-├── README.md # 项目说明
+├── README.md
 ├── requirements.txt
-└── tests
-    └── __init__.py
+└── src
+    ├── assets
+    │   ├── favicon.png
+    │   ├── favicon.svg
+    │   ├── logo.png
+    │   └── logo.svg
+    ├── basic_config.py
+    ├── __init__.py
+    ├── main.py
+    ├── render.py
+    └── utils.py
 
-2 directories, 6 files
+2 directories, 14 files
 ```
