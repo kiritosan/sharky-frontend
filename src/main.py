@@ -1,52 +1,47 @@
 import os
-import time
-import requests
 import streamlit as st
-from PIL import Image
 from basic_config import basic_config
-from render_app import render_app
-
-##########################################################################################
+from render import render
+from streamlit.delta_generator import DeltaGenerator
+from PIL import Image
 
 # Streamlit encourages well-structured code, like starting execution in a main() function.
-def main():
+def main() -> None:
+    # Set basic config
     basic_config()
     
-    content = st.markdown('Content Area', unsafe_allow_html=True)
+    image = Image.open("C:\\Users\\Willem\\Desktop\\Course_Project\\crowd-counting\\frontend\\src\\assets\\favicon.png")
+    logo = st.sidebar.image(image, caption="SHARKY SYSTEM", use_column_width=True)
+    # Set a Content Area to display the main content of the app.
+    content: DeltaGenerator = st.markdown('Content Area', unsafe_allow_html=True)
     
-    # set basic config; render readme; render source code; render sidebar
-
-    # Set basic config
-
     # Set sidebar
-    st.sidebar.title("Crowd Counting System")
-    app_mode = st.sidebar.radio("请选择计数模型",
-        ["使用说明", "运行系统", "查看源码", "显示历史记录"])
+    st.sidebar.title("Sharky Crowd Counting System")
+    app_mode: str | None = st.sidebar.radio("请选择计数模型", ["使用说明", "运行系统", "查看源码", "显示历史记录"])
 
     # Render the app based on the user selection.
     if app_mode == "使用说明":
         content.empty()
-        # Render the readme as markdown using st.markdown.
-        with open("README.md", "r", encoding='UTF-8') as f:
-            ReadmeContent = f.read()
-        content = st.markdown(ReadmeContent, unsafe_allow_html=True)
+        readme_path: str = os.path.join(os.getcwd(), 'README.md')
+        with open(readme_path, "r", encoding='UTF-8') as f:
+            readme_content: str = f.read()
+        content = st.markdown(readme_content, unsafe_allow_html=True)
         st.sidebar.success('选择运行系统进行人群计数')
     elif app_mode == "运行系统":
         content.empty()
-        run_the_app()
+        run_the_system()
     elif app_mode == "查看源码":
         content.empty()
-        # Get the source code for the app
         with open("src/main.py", "r", encoding='UTF-8') as f:
-            sourceCode = f.read()
-        st.code(sourceCode)
+            source_code: str = f.read()
+        st.code(source_code)
     elif app_mode == "显示历史记录":
         content.empty()
-        st.write("历史记录")
+        st.markdown("# 历史记录")
 
-# This is the main app app itself, which appears when the user selects "Run the app".
-def run_the_app():
-    render_app()
+# The main system
+def run_the_system() -> None:
+    render()
 
 if __name__ == "__main__":
     main()

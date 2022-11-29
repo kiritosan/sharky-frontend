@@ -1,3 +1,6 @@
 .venv
 .vscode
+upload
 data
+**/*.pyc
+**/__pycache__
