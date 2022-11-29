@@ -34,12 +34,11 @@ def render() -> None:
                     st.image("https://i.imgur.com/6jK6Y1r.jpg", caption="Original Image", use_column_width=True)
             with processedImgCol:
                 if uploaded_file is not None:
-                    st.sidebar.info(f'图片导入成功：{uploaded_file.name}')
+                    st.sidebar.info(f'图片导入成功')
                 res: Response | None = upload_image_get_response(uploaded_file, url)
                 if res is not None:
                     if res.status_code == 200:
                         res_urls: str = res.json()['original_url']
-                        st.sidebar.success(f'处理后的图片链接为: {res_urls}')
                         for res_url in res_urls:
                             st.image(res_url, caption="Processed Image", use_column_width=True)
                     else:

@@ -13,18 +13,20 @@ def upload_image_get_response(uploaded_file: UploadedFile | None, url: str) -> R
     }
 
     if uploaded_file is not None:
-        st.sidebar.info(f'开始上传图片')
+        st.sidebar.info(f'开始上传图片进行处理')
 
         files: dict[str, tuple[str, bytes, Literal['image/jpeg']]] = {
             'files': (uploaded_file.name ,uploaded_file.getvalue(), 'image/jpeg'),
         }
 
-        response: Response = requests.request('POST', url, headers=headers, files=files)
+        area.empty()
+        with st.spinner('Wait for it...'):
+            response: Response = requests.request('POST', url, headers=headers, files=files)
 
         if response.status_code == 200:
-            st.sidebar.success(f'上传成功\n{response}')
+            st.sidebar.success(f'处理完成')
         else:
-            st.sidebar.error(f'上传失败\n{response}')
+            st.sidebar.error(f'上传失败')
 
         return response
     else:
