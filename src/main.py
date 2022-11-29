@@ -4,14 +4,15 @@ from basic_config import basic_config
 from render import render
 from streamlit.delta_generator import DeltaGenerator
 from PIL import Image
+from PIL.Image import Image as ImageClass
 
 # Streamlit encourages well-structured code, like starting execution in a main() function.
 def main() -> None:
     # Set basic config
     basic_config()
-    
-    image = Image.open("C:\\Users\\Willem\\Desktop\\Course_Project\\crowd-counting\\frontend\\src\\assets\\favicon.png")
-    logo = st.sidebar.image(image, caption="SHARKY SYSTEM", use_column_width=True)
+    path: str = os.path.join(os.getcwd(), "src", "assets", "logo.png")
+    image: ImageClass = Image.open(path)
+    logo: DeltaGenerator = st.sidebar.image(image, caption="SHARKY SYSTEM", use_column_width=True)
     # Set a Content Area to display the main content of the app.
     content: DeltaGenerator = st.markdown('Content Area', unsafe_allow_html=True)
     

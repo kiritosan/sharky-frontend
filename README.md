@@ -29,7 +29,3 @@ streamlit run ./frontend/__init__.py
 
 2 directories, 6 files
 ```
-
-## 项目截图
-
-![运行截图](src/shot.png)
