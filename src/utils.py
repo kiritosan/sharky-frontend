@@ -19,9 +19,7 @@ def upload_image_get_response(uploaded_file: UploadedFile | None, url: str) -> R
             'files': (uploaded_file.name ,uploaded_file.getvalue(), 'image/jpeg'),
         }
 
-        area.empty()
-        with st.spinner('Wait for it...'):
-            response: Response = requests.request('POST', url, headers=headers, files=files)
+        response: Response = requests.request('POST', url, headers=headers, files=files)
 
         if response.status_code == 200:
             st.sidebar.success(f'处理完成')
