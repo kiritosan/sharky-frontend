@@ -1,14 +1,14 @@
 FROM python:3.11
+LABEL author="willem"
+LABEL email="1121567132@qq.com"
+LABEL version="1.0"
+LABEL description="backend for Crowd Counting System"
 
 COPY requirements.txt /tmp
 
 RUN pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --no-cache-dir -r /tmp/requirements.txt
 
-# RUN useradd --create-home app
 WORKDIR /app
-# USER app
-
-# COPY --chown=app:app . .
 COPY . .
 
 EXPOSE 8501

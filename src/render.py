@@ -26,6 +26,7 @@ def render() -> None:
             # declared before spinner, so the spinner is under the columns
             uploaded_file: UploadedFile | None = st.file_uploader("Choose a file")
             
+            # response logic can put anywhere unless there are a view need variables
             if uploaded_file is not None:
                 filename = uploaded_file.name
             else:
@@ -33,9 +34,6 @@ def render() -> None:
 
             if uploaded_file is not None:
                 st.sidebar.info(f'图片导入成功')
-                
-            with st.spinner('图片处理中...'):
-                res: Response | None = upload_image_get_response(uploaded_file, url)
 
             with originalImgCol:
                 if uploaded_file is not None:
@@ -43,6 +41,10 @@ def render() -> None:
                     st.image(image, caption=f'Original Image: {filename}', use_column_width=True)
                 else:
                     st.image(place_holder, caption="Original Image", use_column_width=True)
+            
+            with st.spinner('图片处理中...'):
+                res: Response | None = upload_image_get_response(uploaded_file, url)
+            
             with processedImgCol:
                 if res is not None:
                     if res.status_code == 200:
