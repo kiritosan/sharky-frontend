@@ -22,7 +22,7 @@ def upload_image_get_response(uploaded_file: UploadedFile | None, url: str) -> R
         response: Response = requests.request('POST', url, headers=headers, files=files)
 
         if response.status_code == 200:
-            st.sidebar.success(f'处理完成')
+            st.sidebar.success(f'处理完成 请等待资源载入')
         else:
             st.sidebar.error(f'上传失败')
 
