@@ -24,7 +24,7 @@ def upload_image_get_response(uploaded_file: UploadedFile | None, url: str) -> R
         if response.status_code == 200:
             st.sidebar.success(f'处理完成 请等待资源载入')
         else:
-            st.sidebar.error(f'上传失败')
+            st.sidebar.error(f'上传失败, 请重试')
 
         return response
     else:

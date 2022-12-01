@@ -2,7 +2,7 @@ FROM python:3.11
 LABEL author="willem"
 LABEL email="1121567132@qq.com"
 LABEL version="1.0"
-LABEL description="backend for Crowd Counting System"
+LABEL description="backend for Sharky System"
 
 COPY requirements.txt /tmp
 

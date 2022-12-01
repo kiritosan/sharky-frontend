@@ -17,7 +17,6 @@ def main() -> None:
     content: DeltaGenerator = st.markdown('Content Area', unsafe_allow_html=True)
     
     # Set sidebar
-    st.sidebar.title("Sharky Crowd Counting System")
     app_mode: str | None = st.sidebar.radio("请选择计数模型", ["使用说明", "运行系统", "查看源码", "显示历史记录"])
 
     # Render the app based on the user selection.

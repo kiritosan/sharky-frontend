@@ -1,3 +1,5 @@
+--index-url http://mirrors.aliyun.com/pypi/simple
+
 altair==4.2.0 ; python_version >= "3.11" and python_version < "4.0" \
     --hash=sha256:0c724848ae53410c13fa28be2b3b9a9dcb7b5caa1a70f7f217bd663bb419935a \
     --hash=sha256:d87d9372e63b48cd96b2a6415f0cf9457f50162ab79dc7a31cd7e024dd840026
@@ -46,9 +48,9 @@ importlib-metadata==5.1.0 ; python_version >= "3.11" and python_version < "4.0" 
 jinja2==3.1.2 ; python_version >= "3.11" and python_version < "4.0" \
     --hash=sha256:31351a702a408a9e7595a8fc6150fc3f43bb6bf7e319770cbc0db9df9437e852 \
     --hash=sha256:6088930bfe239f0e6710546ab9c19c9ef35e29792895fed6e6e31a023a182a61
-jsonschema==4.17.1 ; python_version >= "3.11" and python_version < "4.0" \
-    --hash=sha256:05b2d22c83640cde0b7e0aa329ca7754fbd98ea66ad8ae24aa61328dfe057fa3 \
-    --hash=sha256:410ef23dcdbca4eaedc08b850079179883c2ed09378bd1f760d4af4aacfa28d7
+jsonschema==4.17.3 ; python_version >= "3.11" and python_version < "4.0" \
+    --hash=sha256:0f864437ab8b6076ba6707453ef8f98a6a0d512a80e93f8abdb676f737ecb60d \
+    --hash=sha256:a870ad254da1a8ca84b6a2905cac29d265f805acc57af304784962a2aa6508f6
 markupsafe==2.1.1 ; python_version >= "3.11" and python_version < "4.0" \
     --hash=sha256:0212a68688482dc52b2d45013df70d169f542b7394fc744c02a57374a4207003 \
     --hash=sha256:089cf3dbf0cd6c100f02945abeb18484bd1ee57a079aefd52cffd17fba910b88 \
@@ -344,9 +346,9 @@ tornado==6.2 ; python_version >= "3.11" and python_version < "4.0" \
 typing-extensions==4.4.0 ; python_version >= "3.11" and python_version < "4.0" \
     --hash=sha256:1511434bb92bf8dd198c12b1cc812e800d4181cfcb867674e0f8279cc93087aa \
     --hash=sha256:16fa4864408f655d35ec496218b85f79b3437c829e93320c7c9215ccfd92489e
-tzdata==2022.6 ; python_version >= "3.11" and python_version < "4.0" \
-    --hash=sha256:04a680bdc5b15750c39c12a448885a51134a27ec9af83667663f0b3a1bf3f342 \
-    --hash=sha256:91f11db4503385928c15598c98573e3af07e7229181bee5375bd30f1695ddcae
+tzdata==2022.7 ; python_version >= "3.11" and python_version < "4.0" \
+    --hash=sha256:2b88858b0e3120792a3c0635c23daf36a7d7eeeca657c323da299d2094402a0d \
+    --hash=sha256:fe5f866eddd8b96e9fcba978f8e503c909b19ea7efda11e52e39494bad3a7bfa
 tzlocal==4.2 ; python_version >= "3.11" and python_version < "4.0" \
     --hash=sha256:89885494684c929d9191c57aa27502afc87a579be5cdd3225c77c463ea043745 \
     --hash=sha256:ee5842fa3a795f023514ac2d801c4a81d1743bbe642e3940143326b3a00addd7

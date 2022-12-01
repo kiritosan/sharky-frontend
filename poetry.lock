@@ -17,6 +17,11 @@ toolz = "*"
 [package.extras]
 dev = ["black", "docutils", "flake8", "ipython", "m2r", "mistune (<2.0.0)", "pytest", "recommonmark", "sphinx", "vega-datasets"]
 
+[package.source]
+type = "legacy"
+url = "http://mirrors.aliyun.com/pypi/simple"
+reference = "aliyun"
+
 [[package]]
 name = "attrs"
 version = "22.1.0"
@@ -31,6 +36,11 @@ docs = ["furo", "sphinx", "sphinx-notfound-page", "zope.interface"]
 tests = ["cloudpickle", "coverage[toml] (>=5.0.2)", "hypothesis", "mypy (>=0.900,!=0.940)", "pympler", "pytest (>=4.3.0)", "pytest-mypy-plugins", "zope.interface"]
 tests-no-zope = ["cloudpickle", "coverage[toml] (>=5.0.2)", "hypothesis", "mypy (>=0.900,!=0.940)", "pympler", "pytest (>=4.3.0)", "pytest-mypy-plugins"]
 
+[package.source]
+type = "legacy"
+url = "http://mirrors.aliyun.com/pypi/simple"
+reference = "aliyun"
+
 [[package]]
 name = "blinker"
 version = "1.5"
@@ -38,6 +48,11 @@ description = "Fast, simple object-to-object and broadcast signaling"
 category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
+
+[package.source]
+type = "legacy"
+url = "http://mirrors.aliyun.com/pypi/simple"
+reference = "aliyun"
 
 [[package]]
 name = "cachetools"
@@ -47,6 +62,11 @@ category = "main"
 optional = false
 python-versions = "~=3.7"
 
+[package.source]
+type = "legacy"
+url = "http://mirrors.aliyun.com/pypi/simple"
+reference = "aliyun"
+
 [[package]]
 name = "certifi"
 version = "2022.9.24"
@@ -54,6 +74,11 @@ description = "Python package for providing Mozilla's CA Bundle."
 category = "main"
 optional = false
 python-versions = ">=3.6"
+
+[package.source]
+type = "legacy"
+url = "http://mirrors.aliyun.com/pypi/simple"
+reference = "aliyun"
 
 [[package]]
 name = "charset-normalizer"
@@ -66,6 +91,11 @@ python-versions = ">=3.6.0"
 [package.extras]
 unicode-backport = ["unicodedata2"]
 
+[package.source]
+type = "legacy"
+url = "http://mirrors.aliyun.com/pypi/simple"
+reference = "aliyun"
+
 [[package]]
 name = "click"
 version = "8.1.3"
@@ -77,6 +107,11 @@ python-versions = ">=3.7"
 [package.dependencies]
 colorama = {version = "*", markers = "platform_system == \"Windows\""}
 
+[package.source]
+type = "legacy"
+url = "http://mirrors.aliyun.com/pypi/simple"
+reference = "aliyun"
+
 [[package]]
 name = "colorama"
 version = "0.4.6"
@@ -84,6 +119,11 @@ description = "Cross-platform colored terminal text."
 category = "main"
 optional = false
 python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,!=3.5.*,!=3.6.*,>=2.7"
+
+[package.source]
+type = "legacy"
+url = "http://mirrors.aliyun.com/pypi/simple"
+reference = "aliyun"
 
 [[package]]
 name = "commonmark"
@@ -96,6 +136,11 @@ python-versions = "*"
 [package.extras]
 test = ["flake8 (==3.7.8)", "hypothesis (==3.55.3)"]
 
+[package.source]
+type = "legacy"
+url = "http://mirrors.aliyun.com/pypi/simple"
+reference = "aliyun"
+
 [[package]]
 name = "decorator"
 version = "5.1.1"
@@ -104,6 +149,11 @@ category = "main"
 optional = false
 python-versions = ">=3.5"
 
+[package.source]
+type = "legacy"
+url = "http://mirrors.aliyun.com/pypi/simple"
+reference = "aliyun"
+
 [[package]]
 name = "entrypoints"
 version = "0.4"
@@ -111,6 +161,11 @@ description = "Discover and load entry points from installed packages."
 category = "main"
 optional = false
 python-versions = ">=3.6"
+
+[package.source]
+type = "legacy"
+url = "http://mirrors.aliyun.com/pypi/simple"
+reference = "aliyun"
 
 [[package]]
 name = "gitdb"
@@ -123,6 +178,11 @@ python-versions = ">=3.7"
 [package.dependencies]
 smmap = ">=3.0.1,<6"
 
+[package.source]
+type = "legacy"
+url = "http://mirrors.aliyun.com/pypi/simple"
+reference = "aliyun"
+
 [[package]]
 name = "gitpython"
 version = "3.1.29"
@@ -134,6 +194,11 @@ python-versions = ">=3.7"
 [package.dependencies]
 gitdb = ">=4.0.1,<5"
 
+[package.source]
+type = "legacy"
+url = "http://mirrors.aliyun.com/pypi/simple"
+reference = "aliyun"
+
 [[package]]
 name = "idna"
 version = "3.4"
@@ -141,6 +206,11 @@ description = "Internationalized Domain Names in Applications (IDNA)"
 category = "main"
 optional = false
 python-versions = ">=3.5"
+
+[package.source]
+type = "legacy"
+url = "http://mirrors.aliyun.com/pypi/simple"
+reference = "aliyun"
 
 [[package]]
 name = "importlib-metadata"
@@ -158,6 +228,11 @@ docs = ["furo", "jaraco.packaging (>=9)", "jaraco.tidelift (>=1.4)", "rst.linker
 perf = ["ipython"]
 testing = ["flake8 (<5)", "flufl.flake8", "importlib-resources (>=1.3)", "packaging", "pyfakefs", "pytest (>=6)", "pytest-black (>=0.3.7)", "pytest-checkdocs (>=2.4)", "pytest-cov", "pytest-enabler (>=1.3)", "pytest-flake8", "pytest-mypy (>=0.9.1)", "pytest-perf (>=0.9.2)"]
 
+[package.source]
+type = "legacy"
+url = "http://mirrors.aliyun.com/pypi/simple"
+reference = "aliyun"
+
 [[package]]
 name = "jinja2"
 version = "3.1.2"
@@ -172,9 +247,14 @@ MarkupSafe = ">=2.0"
 [package.extras]
 i18n = ["Babel (>=2.7)"]
 
+[package.source]
+type = "legacy"
+url = "http://mirrors.aliyun.com/pypi/simple"
+reference = "aliyun"
+
 [[package]]
 name = "jsonschema"
-version = "4.17.1"
+version = "4.17.3"
 description = "An implementation of JSON Schema validation for Python"
 category = "main"
 optional = false
@@ -188,6 +268,11 @@ pyrsistent = ">=0.14.0,<0.17.0 || >0.17.0,<0.17.1 || >0.17.1,<0.17.2 || >0.17.2"
 format = ["fqdn", "idna", "isoduration", "jsonpointer (>1.13)", "rfc3339-validator", "rfc3987", "uri-template", "webcolors (>=1.11)"]
 format-nongpl = ["fqdn", "idna", "isoduration", "jsonpointer (>1.13)", "rfc3339-validator", "rfc3986-validator (>0.1.0)", "uri-template", "webcolors (>=1.11)"]
 
+[package.source]
+type = "legacy"
+url = "http://mirrors.aliyun.com/pypi/simple"
+reference = "aliyun"
+
 [[package]]
 name = "markupsafe"
 version = "2.1.1"
@@ -196,6 +281,11 @@ category = "main"
 optional = false
 python-versions = ">=3.7"
 
+[package.source]
+type = "legacy"
+url = "http://mirrors.aliyun.com/pypi/simple"
+reference = "aliyun"
+
 [[package]]
 name = "numpy"
 version = "1.23.5"
@@ -203,6 +293,11 @@ description = "NumPy is the fundamental package for array computing with Python.
 category = "main"
 optional = false
 python-versions = ">=3.8"
+
+[package.source]
+type = "legacy"
+url = "http://mirrors.aliyun.com/pypi/simple"
+reference = "aliyun"
 
 [[package]]
 name = "packaging"
@@ -214,6 +309,11 @@ python-versions = ">=3.6"
 
 [package.dependencies]
 pyparsing = ">=2.0.2,<3.0.5 || >3.0.5"
+
+[package.source]
+type = "legacy"
+url = "http://mirrors.aliyun.com/pypi/simple"
+reference = "aliyun"
 
 [[package]]
 name = "pandas"
@@ -234,6 +334,11 @@ pytz = ">=2020.1"
 [package.extras]
 test = ["hypothesis (>=5.5.3)", "pytest (>=6.0)", "pytest-xdist (>=1.31)"]
 
+[package.source]
+type = "legacy"
+url = "http://mirrors.aliyun.com/pypi/simple"
+reference = "aliyun"
+
 [[package]]
 name = "pillow"
 version = "9.3.0"
@@ -246,6 +351,11 @@ python-versions = ">=3.7"
 docs = ["furo", "olefile", "sphinx (>=2.4)", "sphinx-copybutton", "sphinx-issues (>=3.0.1)", "sphinx-removed-in", "sphinxext-opengraph"]
 tests = ["check-manifest", "coverage", "defusedxml", "markdown2", "olefile", "packaging", "pyroma", "pytest", "pytest-cov", "pytest-timeout"]
 
+[package.source]
+type = "legacy"
+url = "http://mirrors.aliyun.com/pypi/simple"
+reference = "aliyun"
+
 [[package]]
 name = "protobuf"
 version = "3.20.3"
@@ -253,6 +363,11 @@ description = "Protocol Buffers"
 category = "main"
 optional = false
 python-versions = ">=3.7"
+
+[package.source]
+type = "legacy"
+url = "http://mirrors.aliyun.com/pypi/simple"
+reference = "aliyun"
 
 [[package]]
 name = "pyarrow"
@@ -264,6 +379,11 @@ python-versions = ">=3.7"
 
 [package.dependencies]
 numpy = ">=1.16.6"
+
+[package.source]
+type = "legacy"
+url = "http://mirrors.aliyun.com/pypi/simple"
+reference = "aliyun"
 
 [[package]]
 name = "pydeck"
@@ -281,6 +401,11 @@ numpy = ">=1.16.4"
 carto = ["pydeck-carto"]
 jupyter = ["ipykernel (>=5.1.2)", "ipython (>=5.8.0)", "ipywidgets (>=7,<8)", "traitlets (>=4.3.2)"]
 
+[package.source]
+type = "legacy"
+url = "http://mirrors.aliyun.com/pypi/simple"
+reference = "aliyun"
+
 [[package]]
 name = "pygments"
 version = "2.13.0"
@@ -292,6 +417,11 @@ python-versions = ">=3.6"
 [package.extras]
 plugins = ["importlib-metadata"]
 
+[package.source]
+type = "legacy"
+url = "http://mirrors.aliyun.com/pypi/simple"
+reference = "aliyun"
+
 [[package]]
 name = "pympler"
 version = "1.0.1"
@@ -299,6 +429,11 @@ description = "A development tool to measure, monitor and analyze the memory beh
 category = "main"
 optional = false
 python-versions = ">=3.6"
+
+[package.source]
+type = "legacy"
+url = "http://mirrors.aliyun.com/pypi/simple"
+reference = "aliyun"
 
 [[package]]
 name = "pyparsing"
@@ -311,6 +446,11 @@ python-versions = ">=3.6.8"
 [package.extras]
 diagrams = ["jinja2", "railroad-diagrams"]
 
+[package.source]
+type = "legacy"
+url = "http://mirrors.aliyun.com/pypi/simple"
+reference = "aliyun"
+
 [[package]]
 name = "pyrsistent"
 version = "0.19.2"
@@ -318,6 +458,11 @@ description = "Persistent/Functional/Immutable data structures"
 category = "main"
 optional = false
 python-versions = ">=3.7"
+
+[package.source]
+type = "legacy"
+url = "http://mirrors.aliyun.com/pypi/simple"
+reference = "aliyun"
 
 [[package]]
 name = "python-dateutil"
@@ -330,6 +475,11 @@ python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,>=2.7"
 [package.dependencies]
 six = ">=1.5"
 
+[package.source]
+type = "legacy"
+url = "http://mirrors.aliyun.com/pypi/simple"
+reference = "aliyun"
+
 [[package]]
 name = "pytz"
 version = "2022.6"
@@ -337,6 +487,11 @@ description = "World timezone definitions, modern and historical"
 category = "main"
 optional = false
 python-versions = "*"
+
+[package.source]
+type = "legacy"
+url = "http://mirrors.aliyun.com/pypi/simple"
+reference = "aliyun"
 
 [[package]]
 name = "pytz-deprecation-shim"
@@ -348,6 +503,11 @@ python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,!=3.5.*,>=2.7"
 
 [package.dependencies]
 tzdata = {version = "*", markers = "python_version >= \"3.6\""}
+
+[package.source]
+type = "legacy"
+url = "http://mirrors.aliyun.com/pypi/simple"
+reference = "aliyun"
 
 [[package]]
 name = "requests"
@@ -367,6 +527,11 @@ urllib3 = ">=1.21.1,<1.27"
 socks = ["PySocks (>=1.5.6,!=1.5.7)"]
 use-chardet-on-py3 = ["chardet (>=3.0.2,<6)"]
 
+[package.source]
+type = "legacy"
+url = "http://mirrors.aliyun.com/pypi/simple"
+reference = "aliyun"
+
 [[package]]
 name = "rich"
 version = "12.6.0"
@@ -382,6 +547,11 @@ pygments = ">=2.6.0,<3.0.0"
 [package.extras]
 jupyter = ["ipywidgets (>=7.5.1,<8.0.0)"]
 
+[package.source]
+type = "legacy"
+url = "http://mirrors.aliyun.com/pypi/simple"
+reference = "aliyun"
+
 [[package]]
 name = "semver"
 version = "2.13.0"
@@ -389,6 +559,11 @@ description = "Python helper for Semantic Versioning (http://semver.org/)"
 category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+
+[package.source]
+type = "legacy"
+url = "http://mirrors.aliyun.com/pypi/simple"
+reference = "aliyun"
 
 [[package]]
 name = "six"
@@ -398,6 +573,11 @@ category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*"
 
+[package.source]
+type = "legacy"
+url = "http://mirrors.aliyun.com/pypi/simple"
+reference = "aliyun"
+
 [[package]]
 name = "smmap"
 version = "5.0.0"
@@ -405,6 +585,11 @@ description = "A pure Python implementation of a sliding window memory map manag
 category = "main"
 optional = false
 python-versions = ">=3.6"
+
+[package.source]
+type = "legacy"
+url = "http://mirrors.aliyun.com/pypi/simple"
+reference = "aliyun"
 
 [[package]]
 name = "streamlit"
@@ -440,6 +625,11 @@ tzlocal = ">=1.1"
 validators = ">=0.2"
 watchdog = {version = "*", markers = "platform_system != \"Darwin\""}
 
+[package.source]
+type = "legacy"
+url = "http://mirrors.aliyun.com/pypi/simple"
+reference = "aliyun"
+
 [[package]]
 name = "toml"
 version = "0.10.2"
@@ -447,6 +637,11 @@ description = "Python Library for Tom's Obvious, Minimal Language"
 category = "main"
 optional = false
 python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
+
+[package.source]
+type = "legacy"
+url = "http://mirrors.aliyun.com/pypi/simple"
+reference = "aliyun"
 
 [[package]]
 name = "toolz"
@@ -456,6 +651,11 @@ category = "main"
 optional = false
 python-versions = ">=3.5"
 
+[package.source]
+type = "legacy"
+url = "http://mirrors.aliyun.com/pypi/simple"
+reference = "aliyun"
+
 [[package]]
 name = "tornado"
 version = "6.2"
@@ -463,6 +663,11 @@ description = "Tornado is a Python web framework and asynchronous networking lib
 category = "main"
 optional = false
 python-versions = ">= 3.7"
+
+[package.source]
+type = "legacy"
+url = "http://mirrors.aliyun.com/pypi/simple"
+reference = "aliyun"
 
 [[package]]
 name = "typing-extensions"
@@ -472,13 +677,23 @@ category = "main"
 optional = false
 python-versions = ">=3.7"
 
+[package.source]
+type = "legacy"
+url = "http://mirrors.aliyun.com/pypi/simple"
+reference = "aliyun"
+
 [[package]]
 name = "tzdata"
-version = "2022.6"
+version = "2022.7"
 description = "Provider of IANA time zone data"
 category = "main"
 optional = false
 python-versions = ">=2"
+
+[package.source]
+type = "legacy"
+url = "http://mirrors.aliyun.com/pypi/simple"
+reference = "aliyun"
 
 [[package]]
 name = "tzlocal"
@@ -496,6 +711,11 @@ tzdata = {version = "*", markers = "platform_system == \"Windows\""}
 devenv = ["black", "pyroma", "pytest-cov", "zest.releaser"]
 test = ["pytest (>=4.3)", "pytest-mock (>=3.3)"]
 
+[package.source]
+type = "legacy"
+url = "http://mirrors.aliyun.com/pypi/simple"
+reference = "aliyun"
+
 [[package]]
 name = "urllib3"
 version = "1.26.13"
@@ -509,10 +729,15 @@ brotli = ["brotli (>=1.0.9)", "brotlicffi (>=0.8.0)", "brotlipy (>=0.6.0)"]
 secure = ["certifi", "cryptography (>=1.3.4)", "idna (>=2.0.0)", "ipaddress", "pyOpenSSL (>=0.14)", "urllib3-secure-extra"]
 socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
 
+[package.source]
+type = "legacy"
+url = "http://mirrors.aliyun.com/pypi/simple"
+reference = "aliyun"
+
 [[package]]
 name = "validators"
 version = "0.20.0"
-description = "Python Data Validation for Humans™."
+description = "Python Data Validation for Humans鈩."
 category = "main"
 optional = false
 python-versions = ">=3.4"
@@ -522,6 +747,11 @@ decorator = ">=3.4.0"
 
 [package.extras]
 test = ["flake8 (>=2.4.0)", "isort (>=4.2.2)", "pytest (>=2.2.3)"]
+
+[package.source]
+type = "legacy"
+url = "http://mirrors.aliyun.com/pypi/simple"
+reference = "aliyun"
 
 [[package]]
 name = "watchdog"
@@ -533,6 +763,11 @@ python-versions = ">=3.6"
 
 [package.extras]
 watchmedo = ["PyYAML (>=3.10)"]
+
+[package.source]
+type = "legacy"
+url = "http://mirrors.aliyun.com/pypi/simple"
+reference = "aliyun"
 
 [[package]]
 name = "zipp"
@@ -546,10 +781,15 @@ python-versions = ">=3.7"
 docs = ["furo", "jaraco.packaging (>=9)", "jaraco.tidelift (>=1.4)", "rst.linker (>=1.9)", "sphinx (>=3.5)"]
 testing = ["flake8 (<5)", "func-timeout", "jaraco.functools", "jaraco.itertools", "more-itertools", "pytest (>=6)", "pytest-black (>=0.3.7)", "pytest-checkdocs (>=2.4)", "pytest-cov", "pytest-enabler (>=1.3)", "pytest-flake8", "pytest-mypy (>=0.9.1)"]
 
+[package.source]
+type = "legacy"
+url = "http://mirrors.aliyun.com/pypi/simple"
+reference = "aliyun"
+
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.11"
-content-hash = "0848863d10dcfc0f8807839c639614707b655bdba32cb3a80172d15e7149cc2c"
+content-hash = "7ad5db193ae858f0b9b2ac082ff28a1b38755bd9e8f9fb734b563a2158552f4f"
 
 [metadata.files]
 altair = [
@@ -617,8 +857,8 @@ jinja2 = [
     {file = "Jinja2-3.1.2.tar.gz", hash = "sha256:31351a702a408a9e7595a8fc6150fc3f43bb6bf7e319770cbc0db9df9437e852"},
 ]
 jsonschema = [
-    {file = "jsonschema-4.17.1-py3-none-any.whl", hash = "sha256:410ef23dcdbca4eaedc08b850079179883c2ed09378bd1f760d4af4aacfa28d7"},
-    {file = "jsonschema-4.17.1.tar.gz", hash = "sha256:05b2d22c83640cde0b7e0aa329ca7754fbd98ea66ad8ae24aa61328dfe057fa3"},
+    {file = "jsonschema-4.17.3-py3-none-any.whl", hash = "sha256:a870ad254da1a8ca84b6a2905cac29d265f805acc57af304784962a2aa6508f6"},
+    {file = "jsonschema-4.17.3.tar.gz", hash = "sha256:0f864437ab8b6076ba6707453ef8f98a6a0d512a80e93f8abdb676f737ecb60d"},
 ]
 markupsafe = [
     {file = "MarkupSafe-2.1.1-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:86b1f75c4e7c2ac2ccdaec2b9022845dbb81880ca318bb7a0a01fbf7813e3812"},
@@ -941,8 +1181,8 @@ typing-extensions = [
     {file = "typing_extensions-4.4.0.tar.gz", hash = "sha256:1511434bb92bf8dd198c12b1cc812e800d4181cfcb867674e0f8279cc93087aa"},
 ]
 tzdata = [
-    {file = "tzdata-2022.6-py2.py3-none-any.whl", hash = "sha256:04a680bdc5b15750c39c12a448885a51134a27ec9af83667663f0b3a1bf3f342"},
-    {file = "tzdata-2022.6.tar.gz", hash = "sha256:91f11db4503385928c15598c98573e3af07e7229181bee5375bd30f1695ddcae"},
+    {file = "tzdata-2022.7-py2.py3-none-any.whl", hash = "sha256:2b88858b0e3120792a3c0635c23daf36a7d7eeeca657c323da299d2094402a0d"},
+    {file = "tzdata-2022.7.tar.gz", hash = "sha256:fe5f866eddd8b96e9fcba978f8e503c909b19ea7efda11e52e39494bad3a7bfa"},
 ]
 tzlocal = [
     {file = "tzlocal-4.2-py3-none-any.whl", hash = "sha256:89885494684c929d9191c57aa27502afc87a579be5cdd3225c77c463ea043745"},
