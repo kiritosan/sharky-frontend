@@ -76,6 +76,8 @@ def render() -> None:
                         st.metric(label="当前预测数值", value=predict_digit, delta="0")
                         st.error(f'当前窗口人数为`{predict_digit}`人，已超过 `{threshold}` 人，系统进行人数预警，请注意！', icon="⚠️")
 
+                        # TODO: HOW TO MAKE DOCKER work
+                        # this link is sharky-backend:8000/static/siren2.mp3, browser can not play it
                         components.html(
                             """
                             <audio autoplay style:"visibility:hidden;position:fixed;">
