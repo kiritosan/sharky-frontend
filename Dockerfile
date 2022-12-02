@@ -6,7 +6,7 @@ LABEL description="backend for Sharky System"
 
 COPY requirements.txt /tmp
 
-RUN pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --no-cache-dir -r /tmp/requirements.txt
+RUN pip install -i https://mirrors.bfsu.edu.cn/pypi/web/simple --no-cache-dir -r /tmp/requirements.txt
 
 WORKDIR /app
 COPY . .

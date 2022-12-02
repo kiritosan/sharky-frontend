@@ -17,6 +17,6 @@ build-backend = "poetry.core.masonry.api"
 
 # change pypi source
 [[tool.poetry.source]]
-name = "aliyun"
-url = "http://mirrors.aliyun.com/pypi/simple"
+name = "bfsu"
+url = "https://mirrors.bfsu.edu.cn/pypi/web/simple"
 default = true

@@ -19,8 +19,8 @@ dev = ["black", "docutils", "flake8", "ipython", "m2r", "mistune (<2.0.0)", "pyt
 
 [package.source]
 type = "legacy"
-url = "http://mirrors.aliyun.com/pypi/simple"
-reference = "aliyun"
+url = "https://mirrors.bfsu.edu.cn/pypi/web/simple"
+reference = "bfsu"
 
 [[package]]
 name = "attrs"
@@ -38,8 +38,8 @@ tests-no-zope = ["cloudpickle", "coverage[toml] (>=5.0.2)", "hypothesis", "mypy 
 
 [package.source]
 type = "legacy"
-url = "http://mirrors.aliyun.com/pypi/simple"
-reference = "aliyun"
+url = "https://mirrors.bfsu.edu.cn/pypi/web/simple"
+reference = "bfsu"
 
 [[package]]
 name = "blinker"
@@ -51,8 +51,8 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
 [package.source]
 type = "legacy"
-url = "http://mirrors.aliyun.com/pypi/simple"
-reference = "aliyun"
+url = "https://mirrors.bfsu.edu.cn/pypi/web/simple"
+reference = "bfsu"
 
 [[package]]
 name = "cachetools"
@@ -64,8 +64,8 @@ python-versions = "~=3.7"
 
 [package.source]
 type = "legacy"
-url = "http://mirrors.aliyun.com/pypi/simple"
-reference = "aliyun"
+url = "https://mirrors.bfsu.edu.cn/pypi/web/simple"
+reference = "bfsu"
 
 [[package]]
 name = "certifi"
@@ -77,8 +77,8 @@ python-versions = ">=3.6"
 
 [package.source]
 type = "legacy"
-url = "http://mirrors.aliyun.com/pypi/simple"
-reference = "aliyun"
+url = "https://mirrors.bfsu.edu.cn/pypi/web/simple"
+reference = "bfsu"
 
 [[package]]
 name = "charset-normalizer"
@@ -93,8 +93,8 @@ unicode-backport = ["unicodedata2"]
 
 [package.source]
 type = "legacy"
-url = "http://mirrors.aliyun.com/pypi/simple"
-reference = "aliyun"
+url = "https://mirrors.bfsu.edu.cn/pypi/web/simple"
+reference = "bfsu"
 
 [[package]]
 name = "click"
@@ -109,8 +109,8 @@ colorama = {version = "*", markers = "platform_system == \"Windows\""}
 
 [package.source]
 type = "legacy"
-url = "http://mirrors.aliyun.com/pypi/simple"
-reference = "aliyun"
+url = "https://mirrors.bfsu.edu.cn/pypi/web/simple"
+reference = "bfsu"
 
 [[package]]
 name = "colorama"
@@ -122,8 +122,8 @@ python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,!=3.5.*,!=3.6.*,>=2.7
 
 [package.source]
 type = "legacy"
-url = "http://mirrors.aliyun.com/pypi/simple"
-reference = "aliyun"
+url = "https://mirrors.bfsu.edu.cn/pypi/web/simple"
+reference = "bfsu"
 
 [[package]]
 name = "commonmark"
@@ -138,8 +138,8 @@ test = ["flake8 (==3.7.8)", "hypothesis (==3.55.3)"]
 
 [package.source]
 type = "legacy"
-url = "http://mirrors.aliyun.com/pypi/simple"
-reference = "aliyun"
+url = "https://mirrors.bfsu.edu.cn/pypi/web/simple"
+reference = "bfsu"
 
 [[package]]
 name = "decorator"
@@ -151,8 +151,8 @@ python-versions = ">=3.5"
 
 [package.source]
 type = "legacy"
-url = "http://mirrors.aliyun.com/pypi/simple"
-reference = "aliyun"
+url = "https://mirrors.bfsu.edu.cn/pypi/web/simple"
+reference = "bfsu"
 
 [[package]]
 name = "entrypoints"
@@ -164,8 +164,8 @@ python-versions = ">=3.6"
 
 [package.source]
 type = "legacy"
-url = "http://mirrors.aliyun.com/pypi/simple"
-reference = "aliyun"
+url = "https://mirrors.bfsu.edu.cn/pypi/web/simple"
+reference = "bfsu"
 
 [[package]]
 name = "gitdb"
@@ -180,8 +180,8 @@ smmap = ">=3.0.1,<6"
 
 [package.source]
 type = "legacy"
-url = "http://mirrors.aliyun.com/pypi/simple"
-reference = "aliyun"
+url = "https://mirrors.bfsu.edu.cn/pypi/web/simple"
+reference = "bfsu"
 
 [[package]]
 name = "gitpython"
@@ -196,8 +196,8 @@ gitdb = ">=4.0.1,<5"
 
 [package.source]
 type = "legacy"
-url = "http://mirrors.aliyun.com/pypi/simple"
-reference = "aliyun"
+url = "https://mirrors.bfsu.edu.cn/pypi/web/simple"
+reference = "bfsu"
 
 [[package]]
 name = "idna"
@@ -209,8 +209,8 @@ python-versions = ">=3.5"
 
 [package.source]
 type = "legacy"
-url = "http://mirrors.aliyun.com/pypi/simple"
-reference = "aliyun"
+url = "https://mirrors.bfsu.edu.cn/pypi/web/simple"
+reference = "bfsu"
 
 [[package]]
 name = "importlib-metadata"
@@ -230,8 +230,8 @@ testing = ["flake8 (<5)", "flufl.flake8", "importlib-resources (>=1.3)", "packag
 
 [package.source]
 type = "legacy"
-url = "http://mirrors.aliyun.com/pypi/simple"
-reference = "aliyun"
+url = "https://mirrors.bfsu.edu.cn/pypi/web/simple"
+reference = "bfsu"
 
 [[package]]
 name = "jinja2"
@@ -249,8 +249,8 @@ i18n = ["Babel (>=2.7)"]
 
 [package.source]
 type = "legacy"
-url = "http://mirrors.aliyun.com/pypi/simple"
-reference = "aliyun"
+url = "https://mirrors.bfsu.edu.cn/pypi/web/simple"
+reference = "bfsu"
 
 [[package]]
 name = "jsonschema"
@@ -270,8 +270,8 @@ format-nongpl = ["fqdn", "idna", "isoduration", "jsonpointer (>1.13)", "rfc3339-
 
 [package.source]
 type = "legacy"
-url = "http://mirrors.aliyun.com/pypi/simple"
-reference = "aliyun"
+url = "https://mirrors.bfsu.edu.cn/pypi/web/simple"
+reference = "bfsu"
 
 [[package]]
 name = "markupsafe"
@@ -283,8 +283,8 @@ python-versions = ">=3.7"
 
 [package.source]
 type = "legacy"
-url = "http://mirrors.aliyun.com/pypi/simple"
-reference = "aliyun"
+url = "https://mirrors.bfsu.edu.cn/pypi/web/simple"
+reference = "bfsu"
 
 [[package]]
 name = "numpy"
@@ -296,8 +296,8 @@ python-versions = ">=3.8"
 
 [package.source]
 type = "legacy"
-url = "http://mirrors.aliyun.com/pypi/simple"
-reference = "aliyun"
+url = "https://mirrors.bfsu.edu.cn/pypi/web/simple"
+reference = "bfsu"
 
 [[package]]
 name = "packaging"
@@ -312,8 +312,8 @@ pyparsing = ">=2.0.2,<3.0.5 || >3.0.5"
 
 [package.source]
 type = "legacy"
-url = "http://mirrors.aliyun.com/pypi/simple"
-reference = "aliyun"
+url = "https://mirrors.bfsu.edu.cn/pypi/web/simple"
+reference = "bfsu"
 
 [[package]]
 name = "pandas"
@@ -336,8 +336,8 @@ test = ["hypothesis (>=5.5.3)", "pytest (>=6.0)", "pytest-xdist (>=1.31)"]
 
 [package.source]
 type = "legacy"
-url = "http://mirrors.aliyun.com/pypi/simple"
-reference = "aliyun"
+url = "https://mirrors.bfsu.edu.cn/pypi/web/simple"
+reference = "bfsu"
 
 [[package]]
 name = "pillow"
@@ -353,8 +353,8 @@ tests = ["check-manifest", "coverage", "defusedxml", "markdown2", "olefile", "pa
 
 [package.source]
 type = "legacy"
-url = "http://mirrors.aliyun.com/pypi/simple"
-reference = "aliyun"
+url = "https://mirrors.bfsu.edu.cn/pypi/web/simple"
+reference = "bfsu"
 
 [[package]]
 name = "protobuf"
@@ -366,8 +366,8 @@ python-versions = ">=3.7"
 
 [package.source]
 type = "legacy"
-url = "http://mirrors.aliyun.com/pypi/simple"
-reference = "aliyun"
+url = "https://mirrors.bfsu.edu.cn/pypi/web/simple"
+reference = "bfsu"
 
 [[package]]
 name = "pyarrow"
@@ -382,8 +382,8 @@ numpy = ">=1.16.6"
 
 [package.source]
 type = "legacy"
-url = "http://mirrors.aliyun.com/pypi/simple"
-reference = "aliyun"
+url = "https://mirrors.bfsu.edu.cn/pypi/web/simple"
+reference = "bfsu"
 
 [[package]]
 name = "pydeck"
@@ -403,8 +403,8 @@ jupyter = ["ipykernel (>=5.1.2)", "ipython (>=5.8.0)", "ipywidgets (>=7,<8)", "t
 
 [package.source]
 type = "legacy"
-url = "http://mirrors.aliyun.com/pypi/simple"
-reference = "aliyun"
+url = "https://mirrors.bfsu.edu.cn/pypi/web/simple"
+reference = "bfsu"
 
 [[package]]
 name = "pygments"
@@ -419,8 +419,8 @@ plugins = ["importlib-metadata"]
 
 [package.source]
 type = "legacy"
-url = "http://mirrors.aliyun.com/pypi/simple"
-reference = "aliyun"
+url = "https://mirrors.bfsu.edu.cn/pypi/web/simple"
+reference = "bfsu"
 
 [[package]]
 name = "pympler"
@@ -432,8 +432,8 @@ python-versions = ">=3.6"
 
 [package.source]
 type = "legacy"
-url = "http://mirrors.aliyun.com/pypi/simple"
-reference = "aliyun"
+url = "https://mirrors.bfsu.edu.cn/pypi/web/simple"
+reference = "bfsu"
 
 [[package]]
 name = "pyparsing"
@@ -448,8 +448,8 @@ diagrams = ["jinja2", "railroad-diagrams"]
 
 [package.source]
 type = "legacy"
-url = "http://mirrors.aliyun.com/pypi/simple"
-reference = "aliyun"
+url = "https://mirrors.bfsu.edu.cn/pypi/web/simple"
+reference = "bfsu"
 
 [[package]]
 name = "pyrsistent"
@@ -461,8 +461,8 @@ python-versions = ">=3.7"
 
 [package.source]
 type = "legacy"
-url = "http://mirrors.aliyun.com/pypi/simple"
-reference = "aliyun"
+url = "https://mirrors.bfsu.edu.cn/pypi/web/simple"
+reference = "bfsu"
 
 [[package]]
 name = "python-dateutil"
@@ -477,8 +477,8 @@ six = ">=1.5"
 
 [package.source]
 type = "legacy"
-url = "http://mirrors.aliyun.com/pypi/simple"
-reference = "aliyun"
+url = "https://mirrors.bfsu.edu.cn/pypi/web/simple"
+reference = "bfsu"
 
 [[package]]
 name = "pytz"
@@ -490,8 +490,8 @@ python-versions = "*"
 
 [package.source]
 type = "legacy"
-url = "http://mirrors.aliyun.com/pypi/simple"
-reference = "aliyun"
+url = "https://mirrors.bfsu.edu.cn/pypi/web/simple"
+reference = "bfsu"
 
 [[package]]
 name = "pytz-deprecation-shim"
@@ -506,8 +506,8 @@ tzdata = {version = "*", markers = "python_version >= \"3.6\""}
 
 [package.source]
 type = "legacy"
-url = "http://mirrors.aliyun.com/pypi/simple"
-reference = "aliyun"
+url = "https://mirrors.bfsu.edu.cn/pypi/web/simple"
+reference = "bfsu"
 
 [[package]]
 name = "requests"
@@ -529,8 +529,8 @@ use-chardet-on-py3 = ["chardet (>=3.0.2,<6)"]
 
 [package.source]
 type = "legacy"
-url = "http://mirrors.aliyun.com/pypi/simple"
-reference = "aliyun"
+url = "https://mirrors.bfsu.edu.cn/pypi/web/simple"
+reference = "bfsu"
 
 [[package]]
 name = "rich"
@@ -549,8 +549,8 @@ jupyter = ["ipywidgets (>=7.5.1,<8.0.0)"]
 
 [package.source]
 type = "legacy"
-url = "http://mirrors.aliyun.com/pypi/simple"
-reference = "aliyun"
+url = "https://mirrors.bfsu.edu.cn/pypi/web/simple"
+reference = "bfsu"
 
 [[package]]
 name = "semver"
@@ -562,8 +562,8 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
 [package.source]
 type = "legacy"
-url = "http://mirrors.aliyun.com/pypi/simple"
-reference = "aliyun"
+url = "https://mirrors.bfsu.edu.cn/pypi/web/simple"
+reference = "bfsu"
 
 [[package]]
 name = "six"
@@ -575,8 +575,8 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*"
 
 [package.source]
 type = "legacy"
-url = "http://mirrors.aliyun.com/pypi/simple"
-reference = "aliyun"
+url = "https://mirrors.bfsu.edu.cn/pypi/web/simple"
+reference = "bfsu"
 
 [[package]]
 name = "smmap"
@@ -588,12 +588,12 @@ python-versions = ">=3.6"
 
 [package.source]
 type = "legacy"
-url = "http://mirrors.aliyun.com/pypi/simple"
-reference = "aliyun"
+url = "https://mirrors.bfsu.edu.cn/pypi/web/simple"
+reference = "bfsu"
 
 [[package]]
 name = "streamlit"
-version = "1.15.1"
+version = "1.15.2"
 description = "The fastest way to build data apps in Python"
 category = "main"
 optional = false
@@ -627,8 +627,8 @@ watchdog = {version = "*", markers = "platform_system != \"Darwin\""}
 
 [package.source]
 type = "legacy"
-url = "http://mirrors.aliyun.com/pypi/simple"
-reference = "aliyun"
+url = "https://mirrors.bfsu.edu.cn/pypi/web/simple"
+reference = "bfsu"
 
 [[package]]
 name = "toml"
@@ -640,8 +640,8 @@ python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
 
 [package.source]
 type = "legacy"
-url = "http://mirrors.aliyun.com/pypi/simple"
-reference = "aliyun"
+url = "https://mirrors.bfsu.edu.cn/pypi/web/simple"
+reference = "bfsu"
 
 [[package]]
 name = "toolz"
@@ -653,8 +653,8 @@ python-versions = ">=3.5"
 
 [package.source]
 type = "legacy"
-url = "http://mirrors.aliyun.com/pypi/simple"
-reference = "aliyun"
+url = "https://mirrors.bfsu.edu.cn/pypi/web/simple"
+reference = "bfsu"
 
 [[package]]
 name = "tornado"
@@ -666,8 +666,8 @@ python-versions = ">= 3.7"
 
 [package.source]
 type = "legacy"
-url = "http://mirrors.aliyun.com/pypi/simple"
-reference = "aliyun"
+url = "https://mirrors.bfsu.edu.cn/pypi/web/simple"
+reference = "bfsu"
 
 [[package]]
 name = "typing-extensions"
@@ -679,8 +679,8 @@ python-versions = ">=3.7"
 
 [package.source]
 type = "legacy"
-url = "http://mirrors.aliyun.com/pypi/simple"
-reference = "aliyun"
+url = "https://mirrors.bfsu.edu.cn/pypi/web/simple"
+reference = "bfsu"
 
 [[package]]
 name = "tzdata"
@@ -692,8 +692,8 @@ python-versions = ">=2"
 
 [package.source]
 type = "legacy"
-url = "http://mirrors.aliyun.com/pypi/simple"
-reference = "aliyun"
+url = "https://mirrors.bfsu.edu.cn/pypi/web/simple"
+reference = "bfsu"
 
 [[package]]
 name = "tzlocal"
@@ -713,8 +713,8 @@ test = ["pytest (>=4.3)", "pytest-mock (>=3.3)"]
 
 [package.source]
 type = "legacy"
-url = "http://mirrors.aliyun.com/pypi/simple"
-reference = "aliyun"
+url = "https://mirrors.bfsu.edu.cn/pypi/web/simple"
+reference = "bfsu"
 
 [[package]]
 name = "urllib3"
@@ -731,8 +731,8 @@ socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
 
 [package.source]
 type = "legacy"
-url = "http://mirrors.aliyun.com/pypi/simple"
-reference = "aliyun"
+url = "https://mirrors.bfsu.edu.cn/pypi/web/simple"
+reference = "bfsu"
 
 [[package]]
 name = "validators"
@@ -750,8 +750,8 @@ test = ["flake8 (>=2.4.0)", "isort (>=4.2.2)", "pytest (>=2.2.3)"]
 
 [package.source]
 type = "legacy"
-url = "http://mirrors.aliyun.com/pypi/simple"
-reference = "aliyun"
+url = "https://mirrors.bfsu.edu.cn/pypi/web/simple"
+reference = "bfsu"
 
 [[package]]
 name = "watchdog"
@@ -766,8 +766,8 @@ watchmedo = ["PyYAML (>=3.10)"]
 
 [package.source]
 type = "legacy"
-url = "http://mirrors.aliyun.com/pypi/simple"
-reference = "aliyun"
+url = "https://mirrors.bfsu.edu.cn/pypi/web/simple"
+reference = "bfsu"
 
 [[package]]
 name = "zipp"
@@ -783,13 +783,13 @@ testing = ["flake8 (<5)", "func-timeout", "jaraco.functools", "jaraco.itertools"
 
 [package.source]
 type = "legacy"
-url = "http://mirrors.aliyun.com/pypi/simple"
-reference = "aliyun"
+url = "https://mirrors.bfsu.edu.cn/pypi/web/simple"
+reference = "bfsu"
 
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.11"
-content-hash = "7ad5db193ae858f0b9b2ac082ff28a1b38755bd9e8f9fb734b563a2158552f4f"
+content-hash = "61c44206d6c112ff11cb5fc7a6e74ac6019d09841d949133aa683a1d23a7756c"
 
 [metadata.files]
 altair = [
@@ -1152,8 +1152,8 @@ smmap = [
     {file = "smmap-5.0.0.tar.gz", hash = "sha256:c840e62059cd3be204b0c9c9f74be2c09d5648eddd4580d9314c3ecde0b30936"},
 ]
 streamlit = [
-    {file = "streamlit-1.15.1-py2.py3-none-any.whl", hash = "sha256:ac8b24fa26dd5dfcd1954a340315c0b36c868c7de688259099dfd909524f1d8d"},
-    {file = "streamlit-1.15.1.tar.gz", hash = "sha256:2ec65c29b6390ff5d8288dac20fa3a4a343ac8f0755de3dc922b468a4d6ea6cc"},
+    {file = "streamlit-1.15.2-py2.py3-none-any.whl", hash = "sha256:40933b64e7b3a1770d798918cbd2ae52a6671a52266ac069f62e1b66f38e0662"},
+    {file = "streamlit-1.15.2.tar.gz", hash = "sha256:31b2fa33848f8dbcf526e6c93017cf58c81a8479844c4f6ff553382e1bac6152"},
 ]
 toml = [
     {file = "toml-0.10.2-py2.py3-none-any.whl", hash = "sha256:806143ae5bfb6a3c6e736a764057db0e6a0e05e338b5630894a5f779cabb4f9b"},
