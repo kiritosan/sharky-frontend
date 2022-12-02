@@ -2,7 +2,8 @@
 
 ## 项目介绍
 
-Sharky人群计数系统前端，基于streamlit开发。
+Sharky人群计数系统前端界面，基于streamlit开发。
+
 Sharky人群计数系统后端API，基于fastapi开发。
 
 ## 项目运行

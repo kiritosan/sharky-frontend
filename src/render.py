@@ -9,7 +9,10 @@ from streamlit.runtime.uploaded_file_manager import UploadedFile
 from requests.models import Response
 import streamlit.components.v1 as components
 
-url: str = os.getenv('URL', 'http://localhost:8000/images')
+
+url: str = os.getenv('URL', 'http://localhost:8000')
+images_url: str = url + '/images'
+siren_url: str = url + '/static/siren2.mp3'
 path: str = os.path.join(os.getcwd(), 'src', 'assets')
 place_holder_path: str = os.path.join(path, 'placeholder.png')
 error_path: str = os.path.join(path, 'error.png')
@@ -44,7 +47,7 @@ def render() -> None:
             # the snippet below couldn't be put in the with statement because the spinner will be under the columns
             if uploaded_file is not None:
                 with st.spinner('请等待图片上传及处理...'):
-                    res: Response | None = upload_image_get_response(uploaded_file, url)
+                    res: Response | None = upload_image_get_response(uploaded_file, images_url)
             else:
                 res: Response | None = None
                 
@@ -73,23 +76,12 @@ def render() -> None:
                         st.metric(label="当前预测数值", value=predict_digit, delta="0")
                         st.error(f'当前窗口人数为`{predict_digit}`人，已超过 `{threshold}` 人，系统进行人数预警，请注意！', icon="⚠️")
 
-                        # generate an audio file
-                        sample_rate = 44100  # 44100 samples per second
-                        seconds = 6  # Note duration of 2 seconds
-
-                        frequency_la = 440  # Our played note will be 440 Hz
-                        
-                        t = np.linspace(0, seconds, seconds * sample_rate, False)
-                        
-                        note_la = np.sin(frequency_la * t * 2 * np.pi)
-                        
-                        siren_path: str = os.getenv('URL', 'http://localhost:8000') + '/static/siren2.mp3'
                         components.html(
                             """
                             <audio autoplay style:"visibility:hidden;position:fixed;">
                                 <source src="%s" type="audio/mpeg">
                             </audio>
-                            """ % siren_path
+                            """ % siren_url
                         )
                     else:
                         st.metric(label="当前预测数值", value=predict_digit, delta="0")
