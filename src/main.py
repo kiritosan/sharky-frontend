@@ -1,7 +1,7 @@
 import os
 import streamlit as st
 from basic_config import basic_config
-from render import render
+from render import render_main, render_history
 from streamlit.delta_generator import DeltaGenerator
 from PIL import Image
 from PIL.Image import Image as ImageClass
@@ -18,7 +18,8 @@ def main() -> None:
     
     # Set sidebar
     app_mode: str | None = st.sidebar.radio("请选择计数模型", ["使用说明", "运行系统", "查看源码", "显示历史记录"])
-
+    # TODO: delete+++++++++++++++++++++++++++++++++++++++=====================+++++++++++++++++++++++++++++++++++++++++++++++
+    app_mode="显示历史记录"
     # Render the app based on the user selection.
     if app_mode == "使用说明":
         content.empty()
@@ -29,7 +30,7 @@ def main() -> None:
         st.sidebar.success('选择运行系统进行人群计数')
     elif app_mode == "运行系统":
         content.empty()
-        run_the_system()
+        render_main()
     elif app_mode == "查看源码":
         content.empty()
         with open("src/main.py", "r", encoding='UTF-8') as f:
@@ -37,11 +38,7 @@ def main() -> None:
         st.code(source_code)
     elif app_mode == "显示历史记录":
         content.empty()
-        st.markdown("# 历史记录")
-
-# The main system
-def run_the_system() -> None:
-    render()
+        render_history()
 
 if __name__ == "__main__":
     main()

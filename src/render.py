@@ -2,23 +2,25 @@ import os
 import streamlit as st
 from PIL import Image
 from PIL.Image import Image as ImageClass
-from utils import upload_image_get_response
+from utils import upload_image_get_response, get_history
 from typing import Literal
 from streamlit.delta_generator import DeltaGenerator
 from streamlit.runtime.uploaded_file_manager import UploadedFile
 from requests.models import Response
 import streamlit.components.v1 as components
+import pandas as pd
 
 
 url: str = os.getenv('URL', 'http://localhost:8000')
 images_url: str = url + '/images'
+history_url: str = url + '/histories'
 siren_url: str = url + '/static/siren2.mp3'
 path: str = os.path.join(os.getcwd(), 'src', 'assets')
 place_holder_path: str = os.path.join(path, 'placeholder.png')
 error_path: str = os.path.join(path, 'error.png')
 place_holder: ImageClass = Image.open(place_holder_path)
 
-def render() -> None:
+def render_main() -> None:
         # https://emojipedia.org/flower-playing-cards/
         imageTab: DeltaGenerator; dataTab:DeltaGenerator
         imageTab, dataTab = st.tabs(["🎴 Image", "🗃 Data"])
@@ -92,3 +94,17 @@ def render() -> None:
         with dataTab:
             st.header("🗃 Data")
             st.markdown("This is the data tab")
+            
+def render_history() -> None:
+    st.header("📜 History")
+    response: Response | None = get_history(history_url)
+    if response:
+        pd.set_option('display.max_colwidth', None)
+        # chart_data = pd.DataFrame(response.json(), columns=['predict_digits'])
+        df = pd.DataFrame(response.json())
+        chart_data = df[['create_time', 'crowd_predict_number']]
+        chart_data['create_time'] = pd.to_datetime(chart_data['create_time'])
+
+        st.line_chart(chart_data, x = 'create_time')
+        st.table(df)
+    

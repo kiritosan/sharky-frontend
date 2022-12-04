@@ -29,3 +29,17 @@ def upload_image_get_response(uploaded_file: UploadedFile | None, url: str) -> R
         return response
     else:
         return None
+    
+# return assert's path or none
+def get_history(url: str) -> Response | None:
+    headers: dict[str, str] = {
+        'accept': 'application/json',
+    }
+    response: Response = requests.request('get', url, headers=headers)
+
+    if response.status_code == 200:
+        st.sidebar.success(f'获取历史成功')
+    else:
+        st.sidebar.error(f'获取历史失败, 请重试')
+
+    return response

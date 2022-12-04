@@ -1,5 +1,5 @@
 .venv
-.vscode
+# .vscode
 upload
 data
 
