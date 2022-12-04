@@ -57,8 +57,10 @@ def render_main() -> None:
                 if 'predict_digits' not in st.session_state:
                     st.session_state['predict_digits'] = None
                 bias: int = 0
+                previous_predict_digits = 0
 
-                previous_predict_digits: int | None = st.session_state['predict_digits'][0]
+                if st.session_state['predict_digits'] is not None:
+                    previous_predict_digits: int | None = st.session_state['predict_digits'][0]
 
                 if res is not None:
                     if res.status_code == 200:
