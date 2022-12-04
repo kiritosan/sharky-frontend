@@ -68,25 +68,40 @@ def render_main() -> None:
                         st.image(error, caption="Processed Image", use_column_width=True)
                 else:
                     st.image(place_holder, caption="Processed Image", use_column_width=True)
-                    
-            threshold: int = st.slider('请选择警示阈值：', 0, 100, 10)
+            threshold: int = st.slider('请选择警示阈值：', 0, 100, 10, key='state_threshold')
             st.markdown(f'当前窗口超过 `{threshold}` 人后，系统进行人数预警')
+            if 'siren' not in st.session_state:
+                st.session_state['siren'] = True
+            if 'predict_digits' not in st.session_state:
+                st.session_state['predict_digits'] = 0
+
+            button: bool = st.button('🔊 预警')
+            if button:
+                st.session_state['siren'] = not st.session_state['siren']
+            
+            if st.session_state['siren'] == True:
+                st.write(f'🔊 预警播报：开')
+            else:
+                st.write(f'🔊 预警播报：关')
+                
 
             if predict_digits is not None:
                 for predict_digit in predict_digits:
                     if predict_digit >= threshold:
-                        st.metric(label="当前预测数值", value=predict_digit, delta="0")
+                        # TODO: HOW TO MAKE DOCKER work
                         st.error(f'当前窗口人数为`{predict_digit}`人，已超过 `{threshold}` 人，系统进行人数预警，请注意！', icon="⚠️")
 
                         # TODO: HOW TO MAKE DOCKER work
                         # this link is sharky-backend:8000/static/siren2.mp3, browser can not play it
-                        components.html(
-                            """
-                            <audio autoplay style:"visibility:hidden;position:fixed;">
-                                <source src="%s" type="audio/mpeg">
-                            </audio>
-                            """ % siren_url
-                        )
+                        if st.session_state['siren']:
+                            
+                            components.html(
+                                """
+                                <audio autoplay style:"visibility:hidden;position:fixed;">
+                                    <source src="%s" type="audio/mpeg">
+                                </audio>
+                                """ % siren_url
+                            )
                     else:
                         st.metric(label="当前预测数值", value=predict_digit, delta="0")
                         st.success(f'当前窗口人数为`{predict_digit}`人，未超过 `{threshold}` 人，请继续保持', icon="👍")
@@ -100,7 +115,6 @@ def render_history() -> None:
     response: Response | None = get_history(history_url)
     if response:
         pd.set_option('display.max_colwidth', None)
-        # chart_data = pd.DataFrame(response.json(), columns=['predict_digits'])
         df = pd.DataFrame(response.json())
         chart_data = df[['create_time', 'crowd_predict_number']]
         chart_data['create_time'] = pd.to_datetime(chart_data['create_time'])

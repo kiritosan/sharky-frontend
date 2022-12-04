@@ -18,8 +18,7 @@ def main() -> None:
     
     # Set sidebar
     app_mode: str | None = st.sidebar.radio("请选择计数模型", ["使用说明", "运行系统", "查看源码", "显示历史记录"])
-    # TODO: delete+++++++++++++++++++++++++++++++++++++++=====================+++++++++++++++++++++++++++++++++++++++++++++++
-    app_mode="显示历史记录"
+
     # Render the app based on the user selection.
     if app_mode == "使用说明":
         content.empty()
