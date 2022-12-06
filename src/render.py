@@ -64,7 +64,7 @@ def render_main() -> None:
 
                 if res is not None:
                     if res.status_code == 200:
-                        res_urls: str = res.json()['original_url']
+                        res_urls: str = res.json()['processed_url']
                         st.session_state['predict_digits'] = res.json()['predict_digits']
                         if previous_predict_digits is not None:
                             bias = st.session_state['predict_digits'][0] - previous_predict_digits

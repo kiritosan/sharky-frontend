@@ -16,7 +16,7 @@ def upload_image_get_response(uploaded_file: UploadedFile | None, url: str) -> R
         st.sidebar.info(f'开始上传图片进行处理')
 
         files: dict[str, tuple[str, bytes, Literal['image/jpeg']]] = {
-            'files': (uploaded_file.name ,uploaded_file.getvalue(), 'image/jpeg'),
+            'files': (uploaded_file.name, uploaded_file.getvalue(), 'image/jpeg'),
         }
 
         response: Response = requests.request('POST', url, headers=headers, files=files)
@@ -29,7 +29,7 @@ def upload_image_get_response(uploaded_file: UploadedFile | None, url: str) -> R
         return response
     else:
         return None
-    
+
 # return assert's path or none
 def get_history(url: str) -> Response | None:
     headers: dict[str, str] = {
