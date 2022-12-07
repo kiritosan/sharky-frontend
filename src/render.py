@@ -55,7 +55,7 @@ def render_main() -> None:
 
             with processedImgCol:
                 if 'predict_digits' not in st.session_state:
-                    st.session_state['predict_digits'] = None
+                    st.session_state['predict_digits'] = [0]
                 bias: int = 0
                 previous_predict_digits = 0
 
