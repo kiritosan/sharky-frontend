@@ -79,6 +79,10 @@ def render_main() -> None:
                         st.sidebar.error(f'引擎预测失败，请选择别的图片进行预测')
                         error: ImageClass = Image.open(error_path)
                         st.image(error, caption="Processed Image", use_column_width=True)
+                    elif res.status_code == 200 and res.json()['message'] == 'upload to oss failed':
+                        st.sidebar.error(f'图片上传到云端失败，请重新上传')
+                        error: ImageClass = Image.open(error_path)
+                        st.image(error, caption="Processed Image", use_column_width=True)
                 else:
                     st.image(place_holder, caption="Processed Image", use_column_width=True)
 
