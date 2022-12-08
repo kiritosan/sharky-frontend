@@ -55,23 +55,28 @@ def render_main() -> None:
 
             with processedImgCol:
                 if 'predict_digits' not in st.session_state:
-                    st.session_state['predict_digits'] = [0]
-                bias: int = 0
+                    st.session_state['predict_digits'] = None
+                bias = 0
                 previous_predict_digits = 0
 
                 if st.session_state['predict_digits'] is not None:
-                    previous_predict_digits: int | None = st.session_state['predict_digits'][0]
+                    previous_predict_digits: int = int(st.session_state['predict_digits'][0])
 
                 if res is not None:
-                    if res.status_code == 200:
-                        res_urls: str = res.json()['processed_url']
+                    if res.status_code == 200 and 'message' not in res.json():
+                        res_urls: list[str] = res.json()['processed_url']
                         st.session_state['predict_digits'] = res.json()['predict_digits']
                         if previous_predict_digits is not None:
-                            bias = st.session_state['predict_digits'][0] - previous_predict_digits
+                            bias: int = st.session_state['predict_digits'][0] - int(previous_predict_digits)
                         # face multiple images upload situation, but st.uploader only support upload one image at one time
                         for res_url in res_urls:
-                            st.image(res_url, caption="Processed Image", use_column_width=True)
-                    else:
+                            st.image(res_url, caption=f"Processed Image: {filename}", use_column_width=True)
+                    elif res.status_code == 200 and res.json()['message'] == "the engine download pictures failed":
+                        st.sidebar.error(f'引擎下载图片失败，请重新上传')
+                        error: ImageClass = Image.open(error_path)
+                        st.image(error, caption="Processed Image", use_column_width=True)
+                    elif res.status_code == 200 and res.json()['message'] == "the engine predict failed":
+                        st.sidebar.error(f'引擎预测失败，请选择别的图片进行预测')
                         error: ImageClass = Image.open(error_path)
                         st.image(error, caption="Processed Image", use_column_width=True)
                 else:
