@@ -11,10 +11,10 @@ import streamlit.components.v1 as components
 import pandas as pd
 
 
-url: str = os.getenv('URL', 'http://localhost:8000')
-images_url: str = url + '/images'
-history_url: str = url + '/histories'
-siren_url: str = url + '/static/siren2.mp3'
+backend_url: str = os.getenv('URL', 'http://localhost:8000')
+upload_images_url: str = backend_url + '/images'
+history_url: str = backend_url + '/histories'
+siren_url: str = backend_url + '/static/siren2.mp3'
 path: str = os.path.join(os.getcwd(), 'src', 'assets')
 place_holder_path: str = os.path.join(path, 'placeholder.png')
 error_path: str = os.path.join(path, 'error.png')
@@ -49,7 +49,7 @@ def render_main() -> None:
             # the snippet below couldn't be put in the with statement because the spinner will be under the columns
             if uploaded_file is not None:
                 with st.spinner('请等待图片上传及处理...'):
-                    res: Response | None = upload_image_get_response(uploaded_file, images_url)
+                    res: Response | None = upload_image_get_response(uploaded_file, upload_images_url)
             else:
                 res: Response | None = None
 
