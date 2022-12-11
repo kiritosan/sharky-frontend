@@ -96,7 +96,7 @@ def render_main() -> None:
                              use_column_width=True)
 
                 elif res.status_code == 200 and res.json()['message'] == 'backend upload to oss failed':
-                    st.sidebar.error(f'图片上传到云端失败，请重新上传')
+                    st.sidebar.error(f'后端上传图片失败，请重新上传')
                     error: ImageClass = Image.open(error_path)
                     st.image(error, caption="Processed Image",
                              use_column_width=True)
