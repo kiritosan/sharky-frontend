@@ -72,7 +72,7 @@ def render_main() -> None:
 
             if res is not None:
                 if res.status_code == 200 and 'message' not in res.json():
-                    res_urls: list[str] = res.json()['processed_url']
+                    res_urls: list[str] = res.json()['processed_urls']
                     st.session_state['predict_digits'] = res.json()[
                         'predict_digits']
                     if previous_predict_digits is not None:
