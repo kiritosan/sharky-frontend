@@ -90,7 +90,7 @@ def render_main() -> None:
                              use_column_width=True)
 
                 elif res.status_code == 200 and res.json()['message'] == "the engine predict failed":
-                    st.sidebar.error(f'引擎预测失败，请选择别的图片进行预测')
+                    st.sidebar.error(f'引擎预测失败，请选择其他图片进行预测')
                     error: ImageClass = Image.open(error_path)
                     st.image(error, caption="Processed Image",
                              use_column_width=True)
