@@ -8,5 +8,7 @@ services:
       - URL=http://localhost:8000
     ports:
       - "8501:8501"
+    dns:
+      - 114.114.114.114
     expose:
       - 8501
