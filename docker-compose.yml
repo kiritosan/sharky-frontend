@@ -1,0 +1,12 @@
+version: "3"
+services:
+  frontend:
+    build: .
+    image: dockerwillem/sharky-frontend:latest
+    container_name: sharky-frontend
+    environment:
+      - URL=http://localhost:8000
+    ports:
+      - "8501:8501"
+    expose:
+      - 8501
