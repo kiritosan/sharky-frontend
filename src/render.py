@@ -14,7 +14,7 @@ import pandas as pd
 backend_url: str = os.getenv('BACKEND_URL', 'http://localhost:8000')
 upload_images_url: str = backend_url + '/images'
 history_url: str = backend_url + '/histories'
-siren_url: str = backend_url + '/static/siren2.mp3'
+siren_url: str = 'https://crowdcount.oss-cn-hangzhou.aliyuncs.com/assets/siren2.mp3'
 path: str = os.path.join(os.getcwd(), 'src', 'assets')
 place_holder_path: str = os.path.join(path, 'placeholder.png')
 error_path: str = os.path.join(path, 'error.png')
@@ -146,7 +146,7 @@ def render_main() -> None:
                                 <audio autoplay style:"visibility:hidden;position:fixed;">
                                     <source src="%s" type="audio/mpeg">
                                 </audio>
-                                """ % siren_url
+                            """ % siren_url
                         )
                 else:
                     st.metric(label="当前预测数值", value=predict_digit, delta=bias)
