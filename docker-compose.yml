@@ -5,7 +5,7 @@ services:
     image: dockerwillem/sharky-frontend:latest
     container_name: sharky-frontend
     environment:
-      - URL=http://localhost:8000
+      - BACKEND_URL=http://localhost:8000
     ports:
       - "8501:8501"
     dns:

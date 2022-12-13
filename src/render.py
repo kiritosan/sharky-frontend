@@ -11,7 +11,7 @@ import streamlit.components.v1 as components
 import pandas as pd
 
 
-backend_url: str = os.getenv('URL', 'http://localhost:8000')
+backend_url: str = os.getenv('BACKEND_URL', 'http://localhost:8000')
 upload_images_url: str = backend_url + '/images'
 history_url: str = backend_url + '/histories'
 siren_url: str = backend_url + '/static/siren2.mp3'

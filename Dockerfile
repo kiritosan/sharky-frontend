@@ -14,4 +14,4 @@ COPY . .
 EXPOSE 8501
 ENTRYPOINT ["streamlit", "run", "./src/main.py"]
 
-ENV URL=<你的后端地址>
+ENV ENGINE_URL=<你的后端地址>

@@ -1,4 +1,5 @@
-📦frontend
+```text
+📦sharky-frontend
  ┣ 📂.vscode
  ┃ ┣ 📜launch.json
  ┃ ┗ 📜settings.json
@@ -23,3 +24,4 @@
  ┣ 📜pyproject.toml
  ┣ 📜README.md
  ┗ 📜requirements.txt
+```
